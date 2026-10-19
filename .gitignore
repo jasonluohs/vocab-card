@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Env files with real values (templates committed: *.example)
+.env
+.env.local
+.env.*.local
+.dev.vars
+
+# caches
+*.tsbuildinfo
+.DS_Store

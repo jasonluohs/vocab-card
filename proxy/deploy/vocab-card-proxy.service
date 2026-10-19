@@ -1,0 +1,23 @@
+[Unit]
+Description=vocab-card API proxy
+After=network.target
+
+[Service]
+Type=simple
+# Adjust to your install location and node binary.
+WorkingDirectory=/opt/vocab-card-proxy
+ExecStart=/usr/bin/node dist/server.js
+Restart=always
+RestartSec=3
+
+# Environment: real values live in this file (chmod 600, root-owned).
+EnvironmentFile=/opt/vocab-card-proxy/.env
+
+# Hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/opt/vocab-card-proxy
+
+[Install]
+WantedBy=multi-user.target

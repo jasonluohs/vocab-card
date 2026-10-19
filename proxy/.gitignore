@@ -1,0 +1,9 @@
+# Proxy runtime env — contains secrets, never commit.
+.env
+.dev.vars
+
+# Build output
+dist/
+
+# Deps
+node_modules/
